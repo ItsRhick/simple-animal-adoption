@@ -1,0 +1,496 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Header Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it appears above other content */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem; /* Adjust padding as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+}
+
+header .site-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+header nav {
+    display: flex;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 1.5rem;
+}
+
+header nav ul li a {
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #007BFF;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url("hero-background.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Featured Animals Section Styles */
+.featured-animals {
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+}
+
+.featured-animals h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.featured-animals p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.featured-animals-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.animal-card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: calc(33.333% - 1rem);
+    margin-bottom: 1rem;
+}
+
+.animal-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.animal-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.animal-card p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Adoption Section Styles */
+.adoption {
+    background-color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.adoption h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.adoption p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.adoption form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.adoption input,
+.adoption textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.adoption button {
+    width: 100%;
+    max-width: 200px;
+}
+
+/* Community Section Styles */
+.community {
+    background-color: #f5f5f5;
+    padding: 2rem 0;
+}
+
+.community h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.community p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.community-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    width: calc(50% - 1rem);
+    margin-bottom: 1rem;
+}
+
+.post img {
+    max-width: 100%; /* Set maximum width to 100% */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.post .user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.post .user img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-right: 0.5rem;
+}
+
+.post p {
+    font-size: 1rem;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+footer .social-media {
+    margin-bottom: 1rem;
+}
+
+footer .social-media a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Featured Animals Header Section Styles */
+.featured-animals-header {
+    background-color: #fff;
+    padding: 2rem 0; /* Add padding as needed */
+    margin-top: 100px;
+}
+
+.featured-animals-header .container {
+    display: flex;
+    justify-content: space-between; /* Align items with other sections */
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Limit width to match other sections */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.header-text {
+    flex: 1;
+    padding-right: 2rem; /* Add spacing between text and image */
+}
+
+.header-text h2 {
+    font-size: 2.5rem; /* Adjust font size */
+    margin-bottom: 1rem; /* Add margin for spacing */
+}
+
+.header-text p {
+    font-size: 1.2rem; /* Adjust font size */
+    margin-bottom: 2rem; /* Add margin for spacing */
+}
+
+.header-image img {
+    max-width: 100%;
+    height: auto;
+    margin-left: 2rem; /* Adjust margin to align with other images */
+}
+
+/* interested adoption */
+
+.interested-adoption {
+    position: relative;
+    padding-top: 200px; /* Increase top padding for larger image */
+    background-image: url('/image/adopt.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center top; /* Adjust position to place the image at the top */
+    text-align: center;
+    color: #fff; /* Set text color to white */
+    padding-bottom: 200px;
+}
+
+.interested-adoption-content {
+    position: relative;
+    z-index: 1; /* Place above the background image */
+}
+
+.interested-adoption h2 {
+    font-size: 36px; /* Increase heading font size */
+    margin-bottom: 20px; /* Add margin bottom */
+}
+
+.interested-adoption p {
+    font-size: 24px; /* Increase paragraph font size */
+    margin-bottom: 30px; /* Add margin bottom */
+}
+
+.interested-adoption button {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 15px 30px; /* Increase button padding */
+    font-size: 20px; /* Increase button font size */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.interested-adoption button:hover {
+    background-color: #333;
+}
+
+/* fill up form */
+.fill-up-form {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+.fill-up-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    flex: 1 0 50%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    width: 100%; /* Take full width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+button[type="submit"] {
+    background-color: #000000;
+    color: #fff;
+    padding: 8px 16px; /* Adjust padding to make the button smaller */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block; /* Display the button inline with the form fields */
+    font-size: 25px; /* Adjust font size to match the smaller button */
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* about-us */
+.about-us {
+    margin: 50px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    background-color: #f2f2f2; /* Changed background color to gray */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-us h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-us h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.about-us p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.about-us ul {
+    margin-bottom: 15px;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.about-us ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+/* contact us */
+.contact-section {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.contact-section form {
+    display: grid;
+    gap: 1rem;
+}
+
+.contact-section label {
+    font-weight: bold;
+}
+
+.contact-section input,
+.contact-section textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.contact-section button:hover {
+    background-color: #444;
+}
